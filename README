@@ -1,0 +1,9 @@
+Digital signal processing labwork
+
+The goal of this project was to implement stereo disparity algorithm for depth estimation between
+two images. The chosen method was sum of squared differences (SSD) blockmatching algorithm. In
+SSD, the differences are squared and aggregated within a square window and later optimized by
+winner-takes-all (WTA) strategy. As a result we get a depth map between two images. A second
+depth map was produced for post-processing purposes. 
+Heterogeneous implementation involved running the host code on CPU and the computationally intensive parts
+were parallelized and offloaded to GPU as kernels using OpenCL.
